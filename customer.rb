@@ -23,7 +23,7 @@ def customer_gets_drunk(customer, drink)
 end
 
   def buy_drink_from_pub(customer, pub, drink)
-    if customer.age >= 18
+    if customer.age >= 18 && customer.drunk_level <= 25
       pub.remove_drink_from_stock(drink)
       pub.add_to_till(drink.price)
       customer.remove_money_from_wallet(drink.price)
