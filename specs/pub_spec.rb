@@ -6,8 +6,8 @@ require_relative("../drink")
 class PubTest < MiniTest::Test
 
 def setup
-  @drink_1 = Drink.new("Vodka", 3)
-  @drink_2 = Drink.new("Rum", 4)
+  @drink_1 = Drink.new("Vodka", 3, 6)
+  @drink_2 = Drink.new("Rum", 4, 6)
   @pub_1 = Pub.new("The Sooky Dook", 100, [@drink_1, @drink_2])
 end
 
@@ -41,9 +41,6 @@ def test_remove_money_from_till
   result = @pub_1.remove_from_till(10)
   assert_equal(90, result)
 end
-# def test_check_pub_details
-#   @pub_1.check_pub_details(@pub_1)
-# end
 
 
 

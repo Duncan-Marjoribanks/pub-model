@@ -1,11 +1,13 @@
 class Customer
 
-  attr_reader(:name, :wallet, :age)
+  attr_reader(:name, :age)
+  attr_accessor(:wallet, :drunk_level)
 
-  def initialize(name, wallet, age)
+  def initialize(name, wallet, age, drunk_level)
     @name = name
     @wallet = wallet
     @age = age
+    @drunk_level = drunk_level
   end
 
   def remove_money_from_wallet(amount)
@@ -25,7 +27,7 @@ class Customer
       return nil
     end
   end
-  
+
 
 
 
