@@ -32,6 +32,15 @@ def test_remove_drink
   assert_equal("Vodka", result.name)
 end
 
+def test_add_money_to_the_till
+  result = @pub_1.add_to_till(10)
+  assert_equal(110, result)
+end
+
+def test_remove_money_from_till
+  result = @pub_1.remove_from_till(10)
+  assert_equal(90, result)
+end
 # def test_check_pub_details
 #   @pub_1.check_pub_details(@pub_1)
 # end

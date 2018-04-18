@@ -19,7 +19,13 @@ def remove_drink_from_stock(drink)
   @stock.delete(drink)
 end
 
+def add_to_till(amount)
+return @till += (amount)
+end
 
+def remove_from_till(amount)
+return @till -= (amount)
+end
 
 
 
