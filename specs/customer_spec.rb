@@ -46,6 +46,11 @@ def test_check_age
  assert_equal(39, @customer_1.age)
 end
 
-
+def test_customer_drunk_level
+  @customer_1.buy_drink_from_pub(@customer_1, @pub_1, @drink_1)
+  @customer_1.buy_drink_from_pub(@customer_1, @pub_1, @drink_2)
+assert_equal(9, @customer_1.drunk_level)
+assert_equal(6, @customer_1.wallet)
+end
 
 end

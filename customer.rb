@@ -18,11 +18,16 @@ class Customer
     return @wallet += (amount)
   end
 
+def customer_gets_drunk(customer, drink)
+  customer.drunk_level += drink.abv
+end
+
   def buy_drink_from_pub(customer, pub, drink)
     if customer.age >= 18
       pub.remove_drink_from_stock(drink)
       pub.add_to_till(drink.price)
       customer.remove_money_from_wallet(drink.price)
+      customer.customer_gets_drunk(customer, drink)
     else
       return nil
     end
