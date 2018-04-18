@@ -38,11 +38,10 @@ end
   end
 
   def buy_food_from_pub(customer, pub, food)
-      # pub.remove_drink_from_stock(drink)
+      # pub.remove_food_from_stock(food)
       pub.add_to_till(food.price)
       customer.remove_money_from_wallet(food.price)
       customer.customer_gets_sober(customer, food)
-
   end
 
 
