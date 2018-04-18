@@ -20,27 +20,19 @@ def remove_drink_from_stock(drink)
 end
 
 def add_to_till(amount)
-return @till += (amount)
+  return @till += (amount)
 end
 
 def remove_from_till(amount)
-return @till -= (amount)
+  return @till -= (amount)
 end
+
 
 
 
 # def check_pub_details(pub)
 #   p pub
 # end
-
-
-
-
-
-
-
-
-
 
 
 
