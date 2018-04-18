@@ -23,7 +23,7 @@ end
 
 def test_can_add_drink
   result = @pub_1.add_drink_to_stock(@drink_2)
-  assert_equal(3, result.count)
+  assert_equal(3, result.count
 end
 
 def test_remove_drink

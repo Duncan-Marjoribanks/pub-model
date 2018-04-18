@@ -7,6 +7,13 @@ def initialize(name, wallet)
   @wallet = wallet
 end
 
+def remove_money_from_wallet(amount)
+  return @wallet -= (amount)
+end
+
+def add_money_to_wallet(amount)
+  return @wallet += (amount)
+end
 
 
 
